@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-USA">
+    <head>
+        <title> Asiya Aliye Portforlio</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css> </rel>
+    </head> 
+
+    <body>
+        <div id="header">
+            <h1 class="headertext"> Portforlio </h1>   
+        </div>
+<!----------------------------about-------------------------------------->
+       <div id="aboutsection">
+            <div class="contain">
+                <div class="positiontext">
+                    <img class="pic" src="IMG.png"> 
+                    <div class="text">
+                        <p>
+                        <h1 style="text-align: left;">Hello!</h1> <br>
+                        I am an incoming senior at Arizona State University majoring in Computer Science with 
+                        plans on pursuing a Master's degree. I am one of the co-founders of Black Students in
+                        Computer and hold the position of Community Chair. My passion for technology drives 
+                        me to excel academically and contribute positively to the community. 
+                        As Community Chair, I work tirelessly to foster a supportive and inclusive
+                        environment for all members, organizing events and initiatives that promote diversity
+                        and collaboration. 
+
+                        </p>
+                    </div>
+                </div>  
+            </div>
+    </div>  
+   <!------------------------------Education ------------------------------>
+   <div id="education">
+        <div class="container">
+                <h1 style="text-align: left;"> Education </h1>
+                <div style="float: left;">
+                    Arizona State University, Ira A. Fulton Schools of Engineering, Tempe, AZ   <br> 
+                    Bachelor of Science, Computer Science 		   	     
+                 </div>
+
+                <div style="float: right;"> GPA 3.6/4.0 <br> Expected May 2025 <br>	
+                </div>
+        </div>
+   </div>
+    <!------------------------------ Projects ------------------------------>
+    <div id = "projects">
+        <div class="projContainer">
+            <h1 style="text-align: left;"> Projects </h1>
+
+            <!------------------------------------- tabs links ----------------------------------->
+            <div class="tab">
+                <p class="tab-title active-link" onclick="opentab('Memory Management')">Memory Management</p>
+                <p class="tab-title" onclick="opentab('Mini Compiler')">Mini Compiler </p>
+                <p class="tab-title" onclick="opentab('Scrum Project')">Scrum Project</p>
+            </div>
+            
+            <!------------------------------------- tabs-content ----------------------------------->
+            <div id="Memory Management" class="tab-content active-tab">
+                <p>
+                    At the completion of this project I built a kernel module that walked through a 
+                    given page table and determined the number of physical memory, how many are swapped out 
+                    to the disk and how many pages are the process working set. 
+                </p>
+                <img class="mem" src="Memory Mang..png">
+
+            </div>
+            <div id="Mini Compiler" class="tab-content">
+                <p> Implemented a small compiler for a simple language which involved generating an intermediate 
+                    representation of the code. After the compiler generates the list of instructions, it will 
+                    execute this list by interpreting it. Meaning the program will traverse the data structure, 
+                    executing each node by modifying memory locations corresponding to operands. It will then 
+                    determine and proceed to the next instruction, continuing until there are no more instructions 
+                    to execute.
+                </p>
+                <img class="mini" src="MiniComp1.png">
+                <img class="mini1" src="MiniComp2.png">
+            </div>
+            <div id="Scrum Project" class="tab-content">
+                <p> My team and I identfied major risks that we perceived had the potential to impede in out 
+                    "Planning Poker" solution. We use the agile project management framework, scrum, to 
+                    facilitate a seamless way to manange and structure our team. We utilized GitHub to enable 
+                    us to work on different parts of the project, using features such as the pull request to 
+                    manage contributions. 
+                </p>
+                <img class="scrum" src="Scrum.png">
+            </div>
+
+        </div>
+    </div>
+
+
+    <!---------------------------------- Contact Me------------------------------------>
+    <div id="contact">
+        <div class="contact-container">
+            <h1> Contact Me</h1>
+            <ul> 
+                <li> aaiye@asu.edu</li>
+                <li><a href="Asiya_Aliye_Resume.pdf" download class="btn">Download Resume</li>
+                    <div class="icons">
+                        <li> <a href="https://www.linkedin.com/in/asiya-aliye/"> <i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/AsiyaAliye"> <i class="fa-brands fa-github"></i></a></li>
+        
+                    </div>
+                    
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!------------------------------ Projects script ------------------------------>
+    <script>
+        
+        var tabtitles = document.getElementsByClassName("tab-title");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname){
+            for(tabtitle of tabtitles){
+                tabtitle.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");               //adds underline to tabtitles
+            document.getElementById(tabname).classList.add("active-tab");       //locates the element with the id equal to the value of tabname and adds the "active-tab" class to that element.
+
+        }
+    </script>
+    </body>  
+</html> 
